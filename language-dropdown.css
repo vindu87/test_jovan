@@ -1,6 +1,6 @@
 .dropbtn {
     /* background-color: #4CAF50; */
-    color: white;
+    color: #000;
     padding: 6px;
     font-size: 16px;
     border: none;
@@ -16,7 +16,7 @@
     display: inline-block;
     width: 62px;
     padding-left: 5px;
-    border-left: Solid 1px white;
+    border-left: Solid 1px #000;
   }
   
   .dropdown-content {
@@ -24,7 +24,7 @@
     position: absolute;
     background-color: transparent;
     width: 55px;
-    margin-left: 1px;
+    margin-left: 4px;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
   }
@@ -41,16 +41,16 @@
   
   .dropdown-content a:hover {
       color: rgba(255, 0, 0, 0.461);
-      background-color: white;
+      /* background-color: white; */
     }
   
   .language-dropdwn:hover .dropdown-content {
     display: block;
-    background-color: white;
+    /* background-color: white; */
   }
   
   .language-dropdwn:hover .dropbtn #chevron { 
     /* .dropbtn */
     color: rgba(255, 0, 0, 0.461);
-    background-color: white;
+    /* background-color: white; */
   }

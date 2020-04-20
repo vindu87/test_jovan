@@ -8,7 +8,7 @@
         color: #555;
         font: normal;
         font-size: 16px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "AvenirNext", "Helvetica Neue", Helvetica, Arial;
         text-align: center;
     }
     
@@ -21,9 +21,13 @@
         text-decoration: none;
         color: inherit;
         cursor: pointer;
-        opacity: 0.9;
+        opacity: .9;
     }
-    
+        
+    i {
+        cursor: pointer;
+    }
+
     a:hover {
         opacity: 1;
     }
@@ -69,8 +73,9 @@
     section h3 {
         color: #414a4f;
         text-transform: capitalize;
-        font: 32px 'Arial', sans-serif;
+        font: 32px sans-serif;
         margin-bottom: 35px;
+        letter-spacing: 2px;
     }
     
     .smallerheadline {
@@ -172,14 +177,14 @@ HEADER
 ---------*/
     
     header {
-        background-color: rgba(0, 0, 0, .7);
+        background-color: rgb(206,234,219, .7);
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 10;
         align-items: center;
-        color: #fff;
+        color: #000;
         padding: 20px 100px 20px;
         display: flex;
         justify-content: space-around;
@@ -190,7 +195,8 @@ HEADER
     }
     
     header nav li {
-        margin: 0 15px;
+        margin: 0 15px;   
+        font-size: 16px;     
     }
     
     header nav li :first-child {
@@ -199,6 +205,11 @@ HEADER
     
     header nav li :last-child {
         margin-right: 0;
+    }
+
+    header nav li :hover {
+        font-size: 20px;
+        transition: font-size .5s ease;
     }
     
     header img {
@@ -214,7 +225,16 @@ HEADER
     header menu {
         float: right;
     }
-    
+
+    .header-title {
+        font-size: 32px;
+        float: left;
+        padding-top: 20px;
+        padding-left: 10px;
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
     @media (max-width: 1000px) {
         header {
             padding: 20px 50px;
@@ -316,4 +336,7 @@ POETRY
         line-height: 22px;
         padding: 0px;
     }
-    
+
+    .audio-playing {
+        color: rgba(255, 0, 0, 0.461);
+    }

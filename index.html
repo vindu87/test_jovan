@@ -15,12 +15,12 @@
 
 <body>
     <header>
-        <a href="#start">
-            <div>
+        <div>
+            <a href="#start">            
                 <img src="images/DSC_0835_square.JPG" alt="test" title="testTitle" class="small_round">
-                <h2>Јован Зивлак</h2>
-            </div>
-        </a>
+                <div class="header-title">Јован Зивлак</div>
+            </a>
+        </div>        
         <div id="menu" class="menu">
             <nav>
                 <li>
@@ -32,24 +32,27 @@
                 <li>
                     <a href="#books">Књиге</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#events">Догађаји</a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#interview">Интервјуи</a>
                 </li>
                 <li>
-                    <a href="#contact">Контакт</a>
+                    <a href="#video">Видео</a>
                 </li>
+                <!-- <li>
+                    <a href="#contact">Контакт</a>
+                </li> -->
             </nav>
         </div>
         <div class="language-dropdwn">
             <button id='language' class="dropbtn">SR</button>
             <i id='chevron' class="fas fa-chevron-down"></i>
             <div class="dropdown-content">
-                <a onclick="changelanguage('EN')" href="#">EN</a>
-                <a onclick="changelanguage('FR')" href="#">FR</a>
-                <a onclick="changelanguage('RU')" href="#">RU</a>
+                <a onclick="changeLanguage('EN')" >EN</a>
+                <a onclick="changeLanguage('FR')" >FR</a>
+                <a onclick="changeLanguage('RU')" >RU</a>
             </div>
           </div>
 
@@ -98,24 +101,46 @@
         <h3>Поезија</h3>
         <ul class="grid">
             <li>
-                <h4>ПРЕСЛИШАВАМ СЕ</h4>
-                <p>да ли је узалудна моја нада. </br>
-                    крило материнско. пљусак</br>
-                    пламени изнад стола.</br>
-                    ту где сам збрајао хлеб и</br>
-                    вино. под крошњом ораха</br>
-                    стишћући језик. да ли је</br>
-                    узалудна моја нада. веселе</br>
-                    речи. јато мушица. ведрина.</br>
-                    рука покреће витло. проповедник</br>
-                    говори лебдећи изнад мноштва.</br>
-                    јесам ли запамтио научено.</br>
-                    људски језик. законе природе.</br>
-                    седим за трпезом и преслишавам се.</br>
+                <h4>ХУК МРТВЕ СОВЕ 
+                    <i id='poem1' class="far fa-play-circle" onclick="playAudio(1)" ></i>
+                </h4>
+                <p>градоначелник је волео да цитира</br>
+                    али није марио да захваљује</br>
+                    време ће ионако срушити поседника</br>
+                    и све ће бити сабијено у безосећајни чип</br>
+                    као  одјек са шалтера где нико не памти имена</br>
+                    али тражи потпис</br>
+                    било шта што се може упоредити</br>
+                    да би се издао документ који не служи ничему.</br>
+                    рекао је још</br>
+                    не рушимо да бисмо тапкали у месту</br>
+                    рушимо да бисмо градили а градимо да бисмо рушили</br>
+                    о томе проповедају пророци</br>
+                    ко наручи прорачанство а не може да плати</br>
+                    као да је слушао нема уста</br>
+                    као да је спавао под хладном месечином</br>
+                    и не сећа се у ком то граду беше.</br>
+                    дакле не рушимо да бисмо рушили</br>
+                    рушимо као да слушамо хук мртве сове</br>
+                    рушење је боље од мртвог поднева</br>
+                    а готов новац од мртвих капитала</br>
+                    испод рушевине је заметак живота</br>
+                    све се креће и никад не стаје</br>
+                    сам привид о томе сведочи.</br>
+                    кад погледаш у ком граду си рођен</br>
+                    нема доказа  да је то исти град</br>
+                    свеједно да ли си први пут ступио на његове улице</br>
+                    или си имао сан који мораш заборавити.</br>
+                    нико је бацач опеке</br>
+                    зид је потпора која ће ишчезнути</br>
+                    а врата ће увек бити отворена</br>
+                    да не изађеш јер нема излаза.</br>                                        
                 </p>
             </li>
             <li>
-                <h4>РАДОСНО ЗА ДОГАЂАЈ ВЕЗАН</h4>
+                <h4>РАДОСНО ЗА ДОГАЂАЈ ВЕЗАН
+                    <i id='poem2' class="far fa-play-circle" onclick="playAudio(2)" ></i>
+                </h4>
                 <p>на темељима овог и оног</br>
                     требало би наставити градњу.</br>
                     рецимо зид вертикално уздигнут</br>
@@ -196,22 +221,23 @@
         <h3>књиге</h3>
         <hr>
     </section>
-    <section id="events">
+    <!-- <section id="events">
         <h3>Догађаји</h3>
         <hr>
-    </section>
+    </section> -->
     <section id="interview">
         <h3>Интервјуи</h3>
         <hr>
     </section>
-    <section id="youtube">
+    <section id="video">
+        <h3>Видео</h3>
         <iframe autop width="620" height="415" src="https://www.youtube.com/embed/AuGlB3xifNY?autoplay=1" frameborder="0" allowfullscreen></iframe>
         <hr>
     </section>
-    <section id="contact">
+    <!-- <section id="contact">
         <h3>Контакт</h3>
         <hr>
-    </section>
+    </section> -->
     <footer>
         <ul>
             <li>
@@ -229,6 +255,12 @@
                 document.write(new Date().getFullYear())
             </script> Jovan Zivlak</p>
     </footer>
+    <div hidden=true>
+        <audio id='1' src="/mp3/huk_mrtve_sove.mp3"></audio>
+        <audio id='2' src="/mp3/gvozdene_vilice.mp3"></audio>
+        <audio id='3' src="/mp3/na_presnjavoj_ulici_medju_povicima.mp3"></audio>
+    </div>
 </body>
-<script src="./index.js"></script>
+<script src="./app.js"></script>
+<!-- <script type="module" src="./audio.js"></script> -->
 </html>
