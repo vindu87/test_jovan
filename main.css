@@ -268,7 +268,6 @@ START
 
 .start .grid li {
   padding: 20px;
-  /* height: 450px; */
   border-radius: 3px;
   background-clip: content-box;
   background-size: cover;
@@ -354,7 +353,7 @@ POETRY
 .about .imageleft {
   float: left;
   margin-right: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-left: 20px;
   /* width: 30%; */
 }
@@ -362,7 +361,7 @@ POETRY
 .about .imageright {
   float: right;
   margin-left: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-right: 20px;
   /* width: 30%; */
 }

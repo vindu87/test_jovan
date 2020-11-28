@@ -37,27 +37,33 @@ $(document).ready(() => {
     }
   };
 
+  var play = 'fa-play-circle';
+  var pause = 'fa-pause-circle';
+  var color = 'audio-playing';
+
+  stopAudio = (id) => {
+    var audio = document.getElementById(id);
+    var element = document.getElementById(`poem${id}`);
+    element.classList.remove(pause, color);
+    element.classList.add(play);
+    audio.pause();
+    audio.currentTime = 0;
+    playing = 0;
+  };
+
   playAudio = (id) => {
     if (anyAudioPlaying(id)) {
-      return;
+      stopAudio(playing);
     }
     var element = document.getElementById(`poem${id}`);
-    var play = 'fa-play-circle';
-    var pause = 'fa-pause-circle';
-    var color = 'audio-playing';
-    var audio = document.getElementById(id);
-
     if (element.className.includes(play)) {
+      var audio = document.getElementById(id);
       element.classList.remove(play);
       element.classList.add(pause, color);
       audio.play();
       playing = id;
     } else {
-      element.classList.remove(pause, color);
-      element.classList.add(play);
-      audio.pause();
-      audio.currentTime = 0;
-      playing = 0;
+      stopAudio(id);
     }
   };
 
