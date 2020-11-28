@@ -51,7 +51,7 @@ hr {
   height: 2px;
   background-color: #082034;
   border: 0;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 
 section {
@@ -73,7 +73,8 @@ section h3 {
   color: #414a4f;
   text-transform: capitalize;
   font: 32px sans-serif;
-  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-bottom: 25px;
   letter-spacing: 2px;
 }
 
