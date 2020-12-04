@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="jovan zivlak pesnik poezija adresa pesme svetovi">
     <meta name="keywords" content="jovan zivlak poezija adresa svetovi pesme">
-    <link rel="icon" type="image/png" href="images/logo.png" class="rel">
+    <link rel="icon" type="image/png" href="../images/logo.png" class="rel">
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/216ea96c30.js" crossorigin="anonymous" />
     </script>
-    <link rel="stylesheet" href="./css/landing.css">
-    <link rel="stylesheet" href="./css/sandwich.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../css/sandwich.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../language-dropdown.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
     <header>
-        <!-- <div id="includeMenu"></div> -->
         <div class="menu">
             <nav>
                 <li>
-                    <a href="./pages/biography.html">О Аутору</a>
+                    <a href="#about">О Аутору</a>
                 </li>
                 <li>
                     <a href="#poetry">Поезија</a>
@@ -54,38 +56,22 @@
                 <div id='spreadheder'></div>
             </div>
         </div>
+        <div class="language-dropdwn">
+            <button id='language' class="dropbtn">SR</button>
+            <i id='chevron' class="fas fa-chevron-down"></i>
+            <div class="dropdown-content">
+                <a href="index_en.html">EN</a>
+                <a onclick="changeLanguage('FR')">FR</a>
+                <a onclick="changeLanguage('RU')">RU</a>
+            </div>
+        </div>
     </header>
+    <div id="includeBiography"></div>
+    <div id="includeFooter"></div>
 
-    <div class="container">
-        <div class="left">
-            <div class="textwrap">
-                <span class="letter">J</span>
-                <span class="letter" style="padding-left: 5px;">o</span>
-                <span class="letter">v</span>
-                <span class="letter">a</span>
-                <span class="letter">n</span></br>
-                <span class="letter">Z</span>
-                <span class="letter">i</span>
-                <span class="letter" style="margin-left: 5px;">v</span>
-                <span class="letter" style="margin-left: 5px;">l</span>
-                <span class="letter" style="margin-left: 10px;">a</span>
-                <span class="letter">k</span></br>
-            </div>
-        </div>
-        <div class="right">
-            <div class="imgwrap">
-                <a href="./pages/biography.html">
-                    <img src="../images/landing.jpeg" alt=""></a>
-            </div>
-        </div>
-        <div class="mobile">
-            <div class="imgwrapsmall">
-                <a href="./pages/biography.html">
-                    <img src="../images/landing.jpeg" alt=""></a>
-            </div>
-        </div>
-    </div>
+    <!-- <div class="container">      
+    </div> -->
 </body>
-<!-- <script src="./js/menu.js"></script> -->
+<script src="../js/sr.js"></script>
 
 </html>

@@ -1,56 +1,64 @@
 .dropbtn {
-    /* background-color: #4CAF50; */
-    color: #000;
-    padding: 6px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-  }
-  .dropbtn i {
-      padding-left: 5px;
-  }
-  
-  .language-dropdwn {
-    position: absolute;
-    right: 10%;
-    width: 62px;
-    padding-left: 5px;
-    border-left: Solid 1px #000;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: transparent;
-    width: 55px;
-    margin-left: 4px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding-left: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: left;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-      color: rgba(255, 0, 0, 0.461);
-      /* background-color: white; */
-    }
-  
-  .language-dropdwn:hover .dropdown-content {
-    display: block;
-    /* background-color: white; */
-  }
-  
-  .language-dropdwn:hover .dropbtn #chevron { 
-    /* .dropbtn */
-    color: rgba(255, 0, 0, 0.461);
-    /* background-color: white; */
-  }
+  /* background-color: #4CAF50; */
+  color: #fff;
+  padding: 6px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.dropbtn i {
+  padding-left: 5px;
+}
+
+.language-dropdwn {
+  position: absolute;
+  right: 10%;
+  width: 62px;
+  padding-left: 5px;
+  border-left: Solid 1px #fff;
+}
+
+.dropdown-content {
+  /* display: none; */
+  position: absolute;
+  background-color: transparent;
+  width: 55px;
+  margin-left: 4px;
+  font-weight: 600;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  z-index: 2;
+  padding-top: 20px;
+  opacity: 0;
+}
+
+.dropdown-content a {
+  /* color: rgb(226, 111, 9); */
+  color: #000;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: rgba(226, 0, 0, 0.461);
+  /* background-color: white; */
+}
+
+.language-dropdwn:hover .dropdown-content {
+  /* display: block; */
+  /* background-color: white; */
+
+  height: 110px;
+  opacity: 1;
+  transition: 1s;
+}
+
+.language-dropdwn:hover .dropbtn #chevron {
+  /* .dropbtn */
+  color: rgba(226, 0, 0, 0.461);
+  /* background-color: white; */
+}
