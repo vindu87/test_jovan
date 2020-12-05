@@ -68,17 +68,7 @@ section h3 {
   font-size: 75%;
 }
 
-@media (max-width: 1000px) {
-  section {
-    padding: 70px 50px;
-  }
-}
 
-@media (max-width: 600px) {
-  section {
-    padding: 50px 20px;
-  }
-}
 
 ul.grid {
   width: 100%;
@@ -194,3 +184,18 @@ POETRY
   height: 370px;
   margin: 20px;
 } */
+
+@media (max-width: 1000px) {
+  section {
+    padding: 70px 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 10px 10px;
+  }
+  .about .grid li.size80 {
+    flex-basis: 100%;
+  }
+}

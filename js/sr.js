@@ -1,4 +1,5 @@
 (function () {
+  $('#includeLanguageDropdown').load('../pages/language/dropdown.html');
   $('#includeBiography').load('../pages/sr/biography.html');
   // $('#includePoetry').load('./pages/sr/poetry.html');
   // $('#includeBooks').load('./pages/sr/books.html');

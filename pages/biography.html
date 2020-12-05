@@ -42,29 +42,27 @@
             </nav>
         </div>
         <div class=sandwichwrap>
-            <div id='sandwich' class="sandwich">
+            <div id='sandwich' class="sandwich" onclick="expandMenu()">
                 <div class="title">Jovan Zivlak</div>
                 <i id='chevron' class="fas fa-bars"></i>
-                <div class="sandwich-content">
-                    <a href="#">Biography</a>
+                <div id='sandwichcontent' class="sandwich-content">
+                    <a href="./pages/biography.html">Biography</a>
                     <a href="#">Poetry</a>
                     <a href="#">Books</a>
                     <a href="#">Interview</a>
                     <a href="#">Events</a>
                     <a href="#">Video</a>
                 </div>
-                <div id='spreadheder'></div>
+                <div id='spreadheder' class="spreadheder"></div>
             </div>
         </div>
-        <div class="language-dropdwn">
-            <button id='language' class="dropbtn">SR</button>
+        <div id='includeLanguageDropdown'></div>
+        <!-- <div class="language-dropdwn">
+            <button id='language' class="dropbtn"></button>
             <i id='chevron' class="fas fa-chevron-down"></i>
-            <div class="dropdown-content">
-                <a href="index_en.html">EN</a>
-                <a onclick="changeLanguage('FR')">FR</a>
-                <a onclick="changeLanguage('RU')">RU</a>
+            <div id='languagedroprown' class="dropdown-content">
             </div>
-        </div>
+        </div> -->
     </header>
     <div id="includeBiography"></div>
     <div id="includeFooter"></div>
@@ -72,6 +70,9 @@
     <!-- <div class="container">      
     </div> -->
 </body>
+<script src="../app.js"></script>
 <script src="../js/sr.js"></script>
+<script src="../js/toggleMenu.js"></script>
+<script type='module' src="../js/lng/runSRlng.js"></script>
 
 </html>
