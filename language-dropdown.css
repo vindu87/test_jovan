@@ -1,5 +1,4 @@
 .dropbtn {
-  /* background-color: #4CAF50; */
   color: #fff;
   padding: 6px;
   font-size: 16px;
@@ -17,23 +16,21 @@
   width: 62px;
   padding-left: 5px;
   border-left: Solid 1px #fff;
+  top: 20px;
 }
 
 .dropdown-content {
-  /* display: none; */
   position: absolute;
   background-color: transparent;
   width: 55px;
   margin-left: 4px;
   font-weight: 600;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 2;
   padding-top: 20px;
   opacity: 0;
 }
 
 .dropdown-content a {
-  /* color: rgb(226, 111, 9); */
   color: #000;
   padding-left: 5px;
   padding-top: 5px;
@@ -45,20 +42,20 @@
 
 .dropdown-content a:hover {
   color: rgba(226, 0, 0, 0.461);
-  /* background-color: white; */
 }
 
 .language-dropdwn:hover .dropdown-content {
-  /* display: block; */
-  /* background-color: white; */
-
   height: 110px;
   opacity: 1;
   transition: 1s;
 }
 
 .language-dropdwn:hover .dropbtn #chevron {
-  /* .dropbtn */
   color: rgba(226, 0, 0, 0.461);
-  /* background-color: white; */
+}
+
+@media (max-width: 800px) {
+  .language-dropdwn {
+    right: 100px;
+  }
 }
