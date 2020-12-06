@@ -19,60 +19,18 @@
 
 <body>
     <header>
-        <div class="menu">
-            <nav>
-                <li>
-                    <a href="#about">О Аутору</a>
-                </li>
-                <li>
-                    <a href="#poetry">Поезија</a>
-                </li>
-                <li>
-                    <a href="#books">Књигe</a>
-                </li>
-                <li>
-                    <a href="#interview">Интервјуи</a>
-                </li>
-                <li>
-                    <a href="#interview">Догађаји</a>
-                </li>
-                <li>
-                    <a href="#video">Видео</a>
-                </li>
-            </nav>
-        </div>
-        <div class=sandwichwrap>
-            <div id='sandwich' class="sandwich" onclick="expandMenu()">
-                <div class="title">Jovan Zivlak</div>
-                <i id='chevron' class="fas fa-bars"></i>
-                <div id='sandwichcontent' class="sandwich-content">
-                    <a href="./pages/biography.html">Biography</a>
-                    <a href="#">Poetry</a>
-                    <a href="#">Books</a>
-                    <a href="#">Interview</a>
-                    <a href="#">Events</a>
-                    <a href="#">Video</a>
-                </div>
-                <div id='spreadheder' class="spreadheder"></div>
-            </div>
-        </div>
+
+        <div id='includeMainMenu'></div>
         <div id='includeLanguageDropdown'></div>
-        <!-- <div class="language-dropdwn">
-            <button id='language' class="dropbtn"></button>
-            <i id='chevron' class="fas fa-chevron-down"></i>
-            <div id='languagedroprown' class="dropdown-content">
-            </div>
-        </div> -->
     </header>
     <div id="includeBiography"></div>
     <div id="includeFooter"></div>
 
-    <!-- <div class="container">      
-    </div> -->
 </body>
-<script src="../app.js"></script>
-<script src="../js/sr.js"></script>
+<script type="module" src="../app.js"></script>
 <script src="../js/toggleMenu.js"></script>
-<script type='module' src="../js/lng/runSRlng.js"></script>
+<script src="../js/loadStaticParts.js"></script>
+<script type="module" src="../js/biographyLoad.js"></script>
+<script type="module" src="../js/languageLoad.js"></script>
 
 </html>

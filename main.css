@@ -68,45 +68,12 @@ section h3 {
   font-size: 75%;
 }
 
-
-
 ul.grid {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-/*--------
-POETRY
----------*/
-/* 
-.poetry {
-  text-align: left;
-}
-
-.poetry .grid li {
-  padding: 20px;
-  height: 100%;
-  border-radius: 3px;
-  background-clip: content-box;
-  background-size: cover;
-  background-position: center;
-  background-color: #fff;
-}
-
-.poetry .grid li h4 {
-  line-height: 40px;
-}
-
-.poetry .grid li p {
-  line-height: 22px;
-  padding: 0px;
-}
-
-.audio-playing {
-  color: rgba(255, 0, 0, 0.461);
-} */
 
 /*---------
     ABOUT
@@ -176,14 +143,49 @@ POETRY
   transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 } */
 
+/*--------
+POETRY
+---------*/
+
+.poetry {
+  text-align: left;
+}
+
+.poetry .grid li {
+  padding: 20px;
+  height: 100%;
+  border-radius: 3px;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+}
+
+.poetry .grid li h4 {
+  line-height: 40px;
+}
+
+.poetry .grid li p {
+  line-height: 22px;
+  padding: 0px;
+}
+
+.audio-playing {
+  color: rgba(255, 0, 0, 0.461);
+}
+
 /*---------
     BOOKS
     ---------*/
-/* #books .grid li img {
+#books .grid li img {
   width: 250px;
   height: 370px;
   margin: 20px;
-} */
+}
+
+/*-----------
+MEDIA
+----------*/
 
 @media (max-width: 1000px) {
   section {
