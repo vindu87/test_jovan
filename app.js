@@ -1,6 +1,6 @@
 import {
   save,
-  loadLnguages,
+  loadLanguages,
   loadMainMenu,
   hideLngDropdown,
   goTo,
@@ -9,7 +9,7 @@ import {
 // (function () {
 window.toggleLanguage = function toggleLanguage(lng, page) {
   save('currentLanguage', lng.toUpperCase());
-  loadLnguages(page);
+  loadLanguages(page);
   loadMainMenu(lng);
   $('#includeContent').load(`./${lng.toLowerCase()}/${page}.html`);
   // hideLngDropdown();

@@ -1,7 +1,7 @@
-import { loadMainMenu, loadLnguages } from './helperFunctions.js';
+import { loadMainMenu, loadLanguages } from './helperFunctions.js';
 
 const initialLoad = () => {
-  loadLnguages('biography');
+  loadLanguages('biography');
   loadMainMenu('SR');
 };
 

@@ -73,7 +73,7 @@ page_lngs['events'] = ['sr'];
 page_lngs['interview'] = ['sr'];
 page_lngs['video'] = ['sr', 'en'];
 
-export const loadLnguages = (page) => {
+export const loadLanguages = (page) => {
   var currentValue = getValue('currentLanguage');
   const lngs = page_lngs[page];
   var btn = document.getElementById('language');
@@ -97,5 +97,5 @@ export const goTo = (page) => {
     `./${value === 'novalue' ? 'sr' : value.toLowerCase()}${page}`
   );
 
-  loadLnguages(page.replace('.html', '').replace('/', ''));
+  loadLanguages(page.replace('.html', '').replace('/', ''));
 };
