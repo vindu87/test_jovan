@@ -1,28 +1,21 @@
-// import { loadMenu } from './js/lng/languageDropdown.js';
-// export const toggleDisplay = (id) => {
-//   var x = document.getElementById(id);
-//   if (x.style.visibility === 'hidden') {
-//     x.style.display = 'block';
-//   } else {
-//     x.style.display = 'none';
-//   }
-// };
-// export const loadText = (lng) => {
-//   loadMenu(lng);
-//   if (lng === 'EN') {
-//     $('#includeBiography').load(`./${lng}/biography.html`);
-//   }
-// };
-
-import { save, loadLngMenu, loadMainMenu } from './js/helperFunctions.js';
+import {
+  save,
+  loadLnguages,
+  loadMainMenu,
+  hideLngDropdown,
+  goTo,
+} from './js/helperFunctions.js';
 
 // (function () {
-window.toggleLanguage = function toggleLanguage(lng) {
+window.toggleLanguage = function toggleLanguage(lng, page) {
   save('currentLanguage', lng.toUpperCase());
-  loadLngMenu(lng.toUpperCase());
+  loadLnguages(page);
   loadMainMenu(lng);
-  $('#includeBiography').load(`./${lng.toLowerCase()}/biography.html`);
+  $('#includeContent').load(`./${lng.toLowerCase()}/${page}.html`);
+  // hideLngDropdown();
 };
+
+window.goTo = goTo;
 
 //show/hide element
 window.toggleDisplay = function toggleDisplay(id) {

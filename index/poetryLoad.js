@@ -1,4 +1,4 @@
-import { getValue } from './helperFunctions.js';
+import { getValue } from '../js/helperFunctions.js';
 
 (function () {
   var value = getValue('currentLanguage');

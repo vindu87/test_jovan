@@ -50,6 +50,10 @@
   transition: 1s;
 }
 
+.dropdown-content-hidden {
+  display: none;
+}
+
 .language-dropdwn:hover .dropbtn #chevron {
   color: rgba(226, 0, 0, 0.461);
 }

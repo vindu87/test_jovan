@@ -13,49 +13,36 @@ export const getValue = (item) => {
   } else return 'novalue';
 };
 
-// menu functions
-export const loadLngMenu = (language) => {
-  var btn = document.getElementById('language');
-  var dropdown = document.getElementById('languagedroprown');
-  if (dropdown && btn) {
-    dropdown.innerHTML = '';
-    btn.innerText = language;
-    if (language !== 'SR') {
-      dropdown.innerHTML += '<a onclick=toggleLanguage("sr")>SR</a>';
-    }
-    if (language !== 'EN') {
-      dropdown.innerHTML += '<a onclick=toggleLanguage("en")>EN</a>';
-    }
-    if (language !== 'FR') {
-      dropdown.innerHTML += '<a onclick=toggleLanguage("fr")>FR</a>';
-    }
-    if (language !== 'RU') {
-      dropdown.innerHTML += '<a onclick=toggleLanguage("ru")>RU</a>';
-    }
-  }
-};
-
 const sr_links = [
-  { name: 'О Аутору', link: './biography.html' },
-  { name: 'Поезија', link: './poetry.html' },
-  { name: 'Књиге', link: './books.html' },
-  { name: 'Интервјуи', link: '#' },
-  { name: 'Догађаји', link: '#' },
-  { name: 'Видео', link: './video.html' },
+  { name: 'О Аутору', link: '/biography.html' },
+  { name: 'Поезија', link: '/poetry.html' },
+  { name: 'Књиге', link: '/books.html' },
+  { name: 'Интервјуи', link: '/interview.html' },
+  { name: 'Догађаји', link: '/events.html' },
+  { name: 'Видео', link: '/video.html' },
 ];
 
 const en_links = [
-  { name: 'Biography', link: './biography.html' },
-  { name: 'Poetry', link: '#' },
-  { name: 'Books', link: './books.html' },
-  { name: 'Interview', link: '#' },
-  { name: 'Events', link: '#' },
-  { name: 'Video', link: './video.html' },
+  { name: 'Biography', link: '/biography.html' },
+  { name: 'Poetry', link: '/poetry.html' },
+  { name: 'Books', link: '/books.html' },
+  { name: 'Video', link: '/video.html' },
+];
+
+const fr_links = [
+  { name: 'Biographie', link: '/biography.html' },
+  { name: 'Livres', link: '/books.html' },
+];
+const ru_links = [
+  { name: 'Biografie', link: '/biography.html' },
+  { name: 'Cărți', link: '/books.html' },
 ];
 
 const links = new Object();
 links['sr'] = sr_links;
 links['en'] = en_links;
+links['fr'] = fr_links;
+links['ru'] = ru_links;
 
 //main menu change
 export const loadMainMenu = (language) => {
@@ -67,8 +54,48 @@ export const loadMainMenu = (language) => {
     sandwich.innerHTML = '';
     var lngLinks = links[language.toLowerCase()];
     lngLinks.forEach((e) => {
-      navigation.innerHTML += `<li><a href="${e.link}">${e.name}</a></li>`;
-      sandwich.innerHTML += `<a href="${e.link}">${e.name}</a>`;
+      navigation.innerHTML += `<li><a onclick="goTo('${e.link}')">${e.name}</a></li>`;
+      sandwich.innerHTML += `<a onclick="goTo('${e.link}')">${e.name}</a>`;
     });
   }
+};
+
+export const hideLngDropdown = () => {
+  var el = document.getElementById('languagedroprown');
+  //el.classList.add('dropdown-content-hidden');
+};
+
+const page_lngs = new Object();
+page_lngs['biography'] = ['sr', 'en', 'fr', 'ru'];
+page_lngs['poetry'] = ['sr', 'en'];
+page_lngs['books'] = ['sr', 'en', 'fr', 'ru'];
+page_lngs['events'] = ['sr'];
+page_lngs['interview'] = ['sr'];
+page_lngs['video'] = ['sr', 'en'];
+
+export const loadLnguages = (page) => {
+  var currentValue = getValue('currentLanguage');
+  const lngs = page_lngs[page];
+  var btn = document.getElementById('language');
+  var dropdown = document.getElementById('languagedroprown');
+
+  btn.innerText = currentValue === 'novalue' ? 'SR' : currentValue;
+
+  if (dropdown && btn) {
+    dropdown.innerHTML = '';
+    lngs.forEach((l) => {
+      if (btn.innerText.toLowerCase() !== l.toLowerCase()) {
+        dropdown.innerHTML += `<a onclick=toggleLanguage("${l.toLowerCase()}","${page}")>${l.toUpperCase()}</a>`;
+      }
+    });
+  }
+};
+
+export const goTo = (page) => {
+  var value = getValue('currentLanguage');
+  $('#includeContent').load(
+    `./${value === 'novalue' ? 'sr' : value.toLowerCase()}${page}`
+  );
+
+  loadLnguages(page.replace('.html', '').replace('/', ''));
 };
