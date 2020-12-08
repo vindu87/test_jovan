@@ -33,16 +33,16 @@ const fr_links = [
   { name: 'Biographie', link: '/biography.html' },
   { name: 'Livres', link: '/books.html' },
 ];
-const ru_links = [
-  { name: 'Biografie', link: '/biography.html' },
-  { name: 'Cărți', link: '/books.html' },
+const rus_links = [
+  { name: 'Биография', link: '/biography.html' },
+  { name: 'Kниги', link: '/books.html' },
 ];
 
 const links = new Object();
 links['sr'] = sr_links;
 links['en'] = en_links;
 links['fr'] = fr_links;
-links['ru'] = ru_links;
+links['rus'] = rus_links;
 
 //main menu change
 export const loadMainMenu = (language) => {
@@ -66,9 +66,9 @@ export const hideLngDropdown = () => {
 };
 
 const page_lngs = new Object();
-page_lngs['biography'] = ['sr', 'en', 'fr', 'ru'];
+page_lngs['biography'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['poetry'] = ['sr', 'en'];
-page_lngs['books'] = ['sr', 'en', 'fr', 'ru'];
+page_lngs['books'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['events'] = ['sr'];
 page_lngs['interview'] = ['sr'];
 page_lngs['video'] = ['sr', 'en'];

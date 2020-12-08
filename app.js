@@ -2,7 +2,7 @@ import {
   save,
   loadLanguages,
   loadMainMenu,
-  hideLngDropdown,
+  // hideLngDropdown,
   goTo,
 } from './js/helperFunctions.js';
 
