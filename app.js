@@ -2,9 +2,20 @@ import {
   save,
   loadLanguages,
   loadMainMenu,
-  // hideLngDropdown,
   goTo,
 } from './js/helperFunctions.js';
+
+const lngContentActive = 'language-droprown-active';
+
+window.expandLanguage = function expandLanguage() {
+  var content = document.getElementById('languagedroprown');
+
+  if (!content.className.includes(lngContentActive)) {
+    content.classList.add(lngContentActive);
+  } else {
+    content.classList.remove(lngContentActive);
+  }
+};
 
 // (function () {
 window.toggleLanguage = function toggleLanguage(lng, page) {
@@ -12,7 +23,7 @@ window.toggleLanguage = function toggleLanguage(lng, page) {
   loadLanguages(page);
   loadMainMenu(lng);
   $('#includeContent').load(`./${lng.toLowerCase()}/${page}.html`);
-  // hideLngDropdown();
+  expandLanguage();
 };
 
 window.goTo = goTo;

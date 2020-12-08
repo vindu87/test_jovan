@@ -9,11 +9,9 @@
     if (!back.className.includes(backActive)) {
       back.classList.add(backActive);
       content.classList.add(conventActive);
-      menuActive = true;
     } else {
       back.classList.remove(backActive);
       content.classList.remove(conventActive);
-      menuActive = true;
     }
   };
 })();

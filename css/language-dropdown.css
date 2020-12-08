@@ -10,6 +10,10 @@
   padding-left: 5px;
 }
 
+.dropbtn:focus {
+  outline: none;
+}
+
 .language-dropdwn {
   position: absolute;
   right: 10%;
@@ -44,18 +48,24 @@
   color: rgba(226, 0, 0, 0.461);
 }
 
-.language-dropdwn:hover .dropdown-content {
+/* .language-dropdwn:hover .dropdown-content {
   height: 110px;
   opacity: 1;
   transition: 1s;
-}
+} */
 
-.dropdown-content-hidden {
+/* .dropdown-content-hidden {
   display: none;
-}
+} */
 
 .language-dropdwn:hover .dropbtn #chevron {
   color: rgba(226, 0, 0, 0.461);
+}
+
+.language-droprown-active {
+  height: 110px;
+  opacity: 1;
+  transition: 1s;
 }
 
 @media (max-width: 800px) {
