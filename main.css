@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #555;
   font: normal;
@@ -46,6 +50,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 600px;
 }
 
 section p {
@@ -183,6 +188,41 @@ POETRY
   margin: 20px;
 }
 
+/*--------
+interview
+---------*/
+
+.scroll-top {
+  position: fixed;
+  right: 5%;
+  top: 20%;
+  font-size: 30px;
+}
+
+.interview {
+  text-align: left;
+}
+
+#interview p {
+  padding: 0px;
+}
+#interview img {
+  margin: 10px;
+}
+
+#interview .article {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0px 20px;
+}
+
+#interview .interview-title {
+  display: inline-block;
+  font-weight: 600;
+  border-bottom: plum solid 1px;
+  margin-bottom: 20px;
+}
+
 /*-----------
 MEDIA
 ----------*/
@@ -199,5 +239,9 @@ MEDIA
   }
   .about .grid li.size80 {
     flex-basis: 100%;
+  }
+
+  .scroll-top {
+    display: none;
   }
 }

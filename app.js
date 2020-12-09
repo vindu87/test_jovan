@@ -31,11 +31,22 @@ window.goTo = goTo;
 //show/hide element
 window.toggleDisplay = function toggleDisplay(id) {
   var x = document.getElementById(id);
-  if (x.style.visibility === 'hidden') {
-    x.style.display = 'block';
-  } else {
-    x.style.display = 'none';
+  if (x) {
+    if (x.style.visibility === 'hidden') {
+      x.style.display = 'block';
+    } else {
+      x.style.display = 'none';
+    }
   }
+};
+
+// window.scrollTop = function scrollTop() {
+//   window.scrollTo(50, 0);
+// };
+
+window.toTheTop = function toTheTop() {
+  console.log('test');
+  window.scrollTo(50, 0);
 };
 
 // })();
