@@ -250,3 +250,20 @@ MEDIA
     display: none;
   }
 }
+
+.pushContentHidden {
+  height: 0px;
+  opacity: 0;
+}
+
+.pushContent {
+  height: 320px;
+  opacity: 1;
+  transition: 1s;
+}
+
+.pushLanguage {
+  height: 100px;
+  opacity: 1;
+  transition: 1s;
+}

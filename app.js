@@ -6,14 +6,18 @@ import {
 } from './js/helperFunctions.js';
 
 const lngContentActive = 'language-droprown-active';
+const pushContent = 'pushLanguage';
 
 window.expandLanguage = function expandLanguage() {
   var content = document.getElementById('languagedroprown');
+  var push = document.getElementById('pushDiv');
 
   if (!content.className.includes(lngContentActive)) {
     content.classList.add(lngContentActive);
+    push.classList.add(pushContent);
   } else {
     content.classList.remove(lngContentActive);
+    push.classList.remove(pushContent);
   }
 };
 
