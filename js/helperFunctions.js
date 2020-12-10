@@ -38,7 +38,7 @@ const rus_links = [
   { name: 'Kниги', link: '/books.html' },
 ];
 
-const links = new Object();
+export const links = new Object();
 links['sr'] = sr_links;
 links['en'] = en_links;
 links['fr'] = fr_links;

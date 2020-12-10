@@ -5,6 +5,6 @@ const initialLoad = () => {
   loadMainMenu('SR');
 };
 
-window.addEventListener('load', function () {
+$(function () {
   initialLoad();
 });
