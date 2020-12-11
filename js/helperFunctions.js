@@ -60,11 +60,6 @@ export const loadMainMenu = (language) => {
   }
 };
 
-export const hideLngDropdown = () => {
-  var el = document.getElementById('languagedroprown');
-  //el.classList.add('dropdown-content-hidden');
-};
-
 const page_lngs = new Object();
 page_lngs['biography'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['poetry'] = ['sr', 'en'];

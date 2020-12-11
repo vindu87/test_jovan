@@ -29,6 +29,7 @@
   font-size: 24px;
   z-index: 2;
   opacity: 0;
+  display: none;
 }
 
 .sandwich-content a {
@@ -49,6 +50,7 @@
   background-color: #000;
   z-index: 1;
   opacity: 0;
+  display: none;
 }
 
 /* .sandwich:hover .sandwich-content {
@@ -74,6 +76,7 @@
   height: 250px;
   opacity: 1;
   transition: 1s;
+  display: block;
 }
 
 .spread-header-active {
@@ -85,6 +88,7 @@
   height: 320px;
   opacity: 1;
   transition: 0.4s;
+  display: block;
 }
 
 @media (max-width: 800px) {

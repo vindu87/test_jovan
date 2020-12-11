@@ -202,6 +202,25 @@ interview
   font-size: 30px;
 }
 
+.article-menu {
+  position: fixed;
+  left: 3%;
+  top: 180px;
+}
+
+.article-menu ul {
+  display: table-cell;
+  padding-top: 5px;
+}
+.article-menu ul li {
+  display: table-row;
+  height: 20px;
+  list-style-type: none;
+  margin: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 .interview {
   text-align: left;
 }
@@ -238,6 +257,16 @@ MEDIA
   }
 }
 
+@media (max-width: 800px) {
+  .scroll-top {
+    display: none;
+  }
+
+  .article-menu {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   section {
     padding: 70px 10px;
@@ -245,25 +274,21 @@ MEDIA
   .about .grid li.size80 {
     flex-basis: 100%;
   }
-
-  .scroll-top {
-    display: none;
-  }
 }
 
 .pushContentHidden {
-  height: 0px;
+  /* height: 0px; */
   opacity: 0;
 }
 
 .pushContent {
-  height: 320px;
+  /* height: 320px; */
   opacity: 1;
   transition: 1s;
 }
 
 .pushLanguage {
-  height: 100px;
+  /* height: 100px; */
   opacity: 1;
   transition: 1s;
 }

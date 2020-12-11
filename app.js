@@ -5,20 +5,43 @@ import {
   goTo,
 } from './js/helperFunctions.js';
 
+// mouseTarget.addEventListener('mouseleave', (e) => {
+//   mouseTarget.style.border = '1px solid #333';
+//   leaveEventCount++;
+//   addListItem('This is mouseleave event ' + leaveEventCount + '.');
+// });
+
 const lngContentActive = 'language-droprown-active';
 const pushContent = 'pushLanguage';
 
 window.expandLanguage = function expandLanguage() {
   var content = document.getElementById('languagedroprown');
   var push = document.getElementById('pushDiv');
-
-  if (!content.className.includes(lngContentActive)) {
-    content.classList.add(lngContentActive);
-    push.classList.add(pushContent);
-  } else {
-    content.classList.remove(lngContentActive);
-    push.classList.remove(pushContent);
+  const childrenCount = content.childElementCount;
+  const isPushContent = childrenCount > 0 && window.innerWidth < 800;
+  if (childrenCount > 0) {
+    if (!content.className.includes(lngContentActive)) {
+      content.classList.add(lngContentActive);
+      if (isPushContent) {
+        push.classList.add(pushContent);
+        push.style.height = `${childrenCount * 33}px`;
+      }
+    } else {
+      content.classList.remove(lngContentActive);
+      if (isPushContent) {
+        push.classList.remove(pushContent);
+        push.style.height = `0px`;
+      }
+    }
   }
+};
+
+window.colapse = function colapse() {
+  var content = document.getElementById('languagedroprown');
+  content.classList.remove(lngContentActive);
+  var push = document.getElementById('pushDiv');
+  push.classList.remove(pushContent);
+  push.style.height = `0px`;
 };
 
 // (function () {
@@ -32,52 +55,13 @@ window.toggleLanguage = function toggleLanguage(lng, page) {
 
 window.goTo = goTo;
 
-//show/hide element
-window.toggleDisplay = function toggleDisplay(id) {
-  var x = document.getElementById(id);
-  if (x) {
-    if (x.style.visibility === 'hidden') {
-      x.style.display = 'block';
-    } else {
-      x.style.display = 'none';
-    }
-  }
-};
-
-// window.scrollTop = function scrollTop() {
-//   window.scrollTo(50, 0);
-// };
-
 window.toTheTop = function toTheTop() {
-  console.log('test');
   window.scrollTo(50, 0);
 };
 
-// })();
-// export { toggleLanguage, toggleDisplay };
-// window.toggleLanguage = toggleLanguage;
-// window.toggleDisplay = toggleDisplay;
-// $('a[href^="#"]').on('click', function (e) {
-//   if (this.hash === '') {
-//   }
-//   e.preventDefault();
-//   var target = this.hash === '' ? '#start' : this.hash,
-//     $target = $(target);
-//   $('html, body')
-//     .stop()
-//     .animate(
-//       {
-//         scrollTop: $target.offset().top,
-//       },
-//       900,
-//       'swing',
-//       function () {
-//         window.location.hash = target;
-//       }
-//     );
-// });
-
-// $('.button').click(function () {});
-// changeLanguage = (val) => {
-//   $('#language')[0].innerText = val;
-//  };
+window.toTheItem = function toTheItem(id) {
+  let el = document.getElementById(id);
+  if (el) {
+    window.scroll(0, el.offsetTop - 80);
+  }
+};

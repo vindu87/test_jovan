@@ -19,8 +19,28 @@
 
 <body>
     <header>
-        <div id='includeMainMenu'></div>
-        <div id='includeLanguageDropdown'></div>
+        <!-- <div id='includeMainMenu'></div> -->
+        <!-- <div id='includeLanguageDropdown'></div> -->
+
+        <div id="mainMenu" class="menu">
+            <nav id="navigation"></nav>
+        </div>
+        <div id="sandwichMenu" class=sandwichwrap>
+            <div id='sandwich' class="sandwich" onclick="expandMenu()">
+                <div class="title">Jovan Zivlak</div>
+                <i id='chevron' class="fas fa-bars"></i>
+                <div id='sandwichcontent' class="sandwich-content"></div>
+                <div id='spreadheder' class="spreadheder"></div>
+            </div>
+        </div>
+        <div class="language-dropdwn">
+            <div onclick="expandLanguage()">
+                <button id='language' class="dropbtn"></button>
+                <i id='chevron' class="fas fa-chevron-down"></i>
+            </div>
+            <div id='languagedroprown' class="dropdown-content">
+            </div>
+        </div>
     </header>
     <div id='pushDiv' class="pushContentHidden"></div>
     <div id="includeContent" style="min-height: calc(100% - 90px);"></div>

@@ -2,14 +2,30 @@
     <div class="scroll-top" title="Go to the top" onclick="toTheTop()">
         <i class="fas fa-angle-double-up"></i>
     </div>
+    <div class="article-menu">
+        <span style="border-bottom: black 1px solid; margin-left: 10px;">Интервјуи:</span>
+        <ul>
+            <li onclick="toTheItem(1)">- Национална Ревија, 2016.</li>
+            <li onclick="toTheItem(2)">- Политика, 2015.</li>
+        </ul>
+    </div>
     <h3>Интервјуи</h3>
-    <div class="article">
+    <div class="article" id="1">
         <div class="interview-title">
-            <a href="https://www.nacionalnarevija.com/tekstovi/br%2055/05%20Zivlak.html" target="_blank">Izvor:
-                Nacinalna Revija, 2016.</a></div>
+            <a href="https://www.nacionalnarevija.com/tekstovi/br%2055/05%20Zivlak.html" target="_blank">Извор:
+                Национална Ревија, 2016.</a></div>
         <div id="nacinalnaRevija"></div>
     </div>
     <hr>
+    <div class="article" id="2">
+        <div class="interview-title">
+            <a href="http://www.politika.rs/scc/clanak/331616/Menadzeri-su-postali-vazniji-od-umetnika"
+                target="_blank">Извор:
+                Политика, 2015.</a></div>
+        <div id="politika"></div>
+    </div>
+    <hr>
+
 </section>
 <script src="../js/loadInterview.js"></script>
 <script type="module" src="../js/interview.js"></script>
