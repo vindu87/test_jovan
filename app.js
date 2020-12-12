@@ -10,6 +10,9 @@ import {
 //   leaveEventCount++;
 //   addListItem('This is mouseleave event ' + leaveEventCount + '.');
 // });
+window.toTheTop = function toTheTop() {
+  window.scrollTo(50, 0);
+};
 
 const lngContentActive = 'language-droprown-active';
 const pushContent = 'pushLanguage';
@@ -51,13 +54,12 @@ window.toggleLanguage = function toggleLanguage(lng, page) {
   loadMainMenu(lng);
   $('#includeContent').load(`./${lng.toLowerCase()}/${page}.html`);
   expandLanguage();
+  toTheTop();
 };
 
 window.goTo = goTo;
 
-window.toTheTop = function toTheTop() {
-  window.scrollTo(50, 0);
-};
+
 
 window.toTheItem = function toTheItem(id) {
   let el = document.getElementById(id);

@@ -3,6 +3,10 @@ export const save = (item, value) => {
   localStorage.setItem(item, value);
 };
 
+export const toTheTop = () => {
+  window.scrollTo(50, 0);
+};
+
 //get saved item value
 export const getValue = (item) => {
   if (window.localStorage) {
@@ -90,6 +94,6 @@ export const goTo = (page) => {
   $('#includeContent').load(
     `./${value === 'novalue' ? 'sr' : value.toLowerCase()}${page}`
   );
-
   loadLanguages(page.replace('.html', '').replace('/', ''));
+  toTheTop();
 };
