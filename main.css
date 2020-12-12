@@ -247,6 +247,12 @@ interview
   margin-bottom: 20px;
 }
 
+@media (max-width: 600px) {
+  #interview img {
+    width: 350px;
+  }
+}
+
 /*-----------
 MEDIA
 ----------*/
