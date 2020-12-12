@@ -26,7 +26,6 @@ const en_links = [
   { name: 'Biography', link: '/biography.html' },
   { name: 'Poetry', link: '/poetry.html' },
   { name: 'Books', link: '/books.html' },
-  { name: 'Video', link: '/video.html' },
 ];
 
 const fr_links = [
@@ -66,7 +65,7 @@ page_lngs['poetry'] = ['sr', 'en'];
 page_lngs['books'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['events'] = ['sr'];
 page_lngs['interview'] = ['sr'];
-page_lngs['video'] = ['sr', 'en'];
+page_lngs['video'] = ['sr'];
 
 export const loadLanguages = (page) => {
   var currentValue = getValue('currentLanguage');
