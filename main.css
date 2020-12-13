@@ -232,6 +232,13 @@ POETRY
   margin: 20px;
 }
 
+#books .grid li .title {
+  width: 250px;
+  overflow: auto;
+  font-style: italic;
+  margin: 0 20px;
+}
+
 /*--------
 interview
 ---------*/
@@ -297,10 +304,8 @@ interview
 /*------------
 VIDEO
 ------------*/
-#video {
-}
-
 #video .video {
+  width: 100%;
 }
 
 #video .videoTitle {

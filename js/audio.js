@@ -50,6 +50,7 @@
   };
 
   const publicationIds = [
+    
     'skola',
     'cestar',
     'brodar',
