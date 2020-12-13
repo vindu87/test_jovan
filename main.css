@@ -172,7 +172,7 @@ POETRY
   background-size: cover;
   background-position: center;
   background-color: #fff;
-  border: solid 1px red;
+  /* border: solid 1px red; */
 }
 
 #poetry .grid li h4 {
