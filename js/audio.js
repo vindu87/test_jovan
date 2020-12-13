@@ -135,6 +135,11 @@
   const closeMulty = (ids) => {
     ids.forEach((id) => {
       const el = document.getElementById(id);
+      // el.style.opacity = 0;
+      // setTimeout(() => {
+      //   closeElement(el, id);
+      //   el.style.opacity = 1;
+      // }, 500);
       closeElement(el, id);
     });
   };
@@ -156,6 +161,13 @@
         icon.classList.add(classOpen);
       }
       const poems = srpoems[id];
+      // el.style.opacity = 0;
+      // setTimeout(() => {
+      //   poems.forEach((p) => {
+      //     el.innerHTML += `<div onclick=loadPoem("${p.link}")>${p.name}</div>`;
+      //   });
+      //   el.style.opacity = 1;
+      // }, 500);
       poems.forEach((p) => {
         el.innerHTML += `<div onclick=loadPoem("${p.link}")>${p.name}</div>`;
       });

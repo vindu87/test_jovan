@@ -197,6 +197,7 @@ POETRY
 
 #poetry .poemlist {
   padding-left: 28px;
+  /* transition: 0.5s; */
 }
 
 .audio-playing {
