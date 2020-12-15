@@ -169,7 +169,7 @@
       //   el.style.opacity = 1;
       // }, 500);
       poems.forEach((p) => {
-        el.innerHTML += `<div onclick=loadPoem("${p.link}")>${p.name}</div>`;
+        el.innerHTML += `<div class="poem" onclick=loadPoem("${p.link}")>${p.name}</div>`;
       });
     }
   };

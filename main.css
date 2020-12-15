@@ -189,6 +189,7 @@ POETRY
 
 #poetry .publication {
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 #poetry .publication i {
@@ -198,6 +199,10 @@ POETRY
 #poetry .poemlist {
   padding-left: 28px;
   /* transition: 0.5s; */
+}
+
+#poetry .poem {
+  padding-top: 5px;
 }
 
 .audio-playing {
