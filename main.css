@@ -103,6 +103,10 @@ ul.grid {
   /* width: 30%; */
 }
 
+.about .imageleft img {
+  width: 250px;
+}
+
 .about .imageright {
   float: right;
   margin-left: 20px;
@@ -331,6 +335,10 @@ VIDEO
 }
 
 @media (max-width: 600px) {
+  #about .imageleft img {
+    width: 200px;
+  }
+
   #video iframe {
     width: 400px;
   }
@@ -355,6 +363,10 @@ VIDEO
 
   #about .about {
     width: 330px;
+  }
+
+  #about .imageleft img {
+    width: 180px;
   }
 
   #about img {
