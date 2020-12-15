@@ -312,6 +312,14 @@ interview
 }
 
 /*------------
+EVENTS
+-----------*/
+#events .grid li img {
+  width: 700px;
+  height: 900px;
+}
+
+/*------------
 VIDEO
 ------------*/
 #video .video {
@@ -325,6 +333,11 @@ VIDEO
 @media (max-width: 600px) {
   #video iframe {
     width: 400px;
+  }
+
+  #events .grid li img {
+    width: 400px;
+    height: 500px;
   }
 }
 
@@ -349,6 +362,11 @@ VIDEO
   }
   #about .text {
     margin: 0 10px;
+  }
+
+  #events .grid li img {
+    width: 300px;
+    height: 400px;
   }
 }
 
@@ -377,6 +395,10 @@ MEDIA
     padding: 70px 10px;
   }
   .about .grid li.size80 {
+    flex-basis: 100%;
+  }
+
+  .events .grid li.size80 {
     flex-basis: 100%;
   }
 
