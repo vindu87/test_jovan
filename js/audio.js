@@ -40,15 +40,9 @@
     }
   };
 
-  // poemsAudioToIdMapper = (id) => {
-  //   switch (id) {
-  //     case 1:
-  //       return 'huk_mrtve_sove';
-  //     default:
-  //       break;
-  //   }
-  // };
-
+  /*---------------
+  SERBIAN PUBLICATIONS
+  ----------------*/
   const publicationIds = [
     'brodar',
     // 'skola',
@@ -120,6 +114,25 @@
   srpoems['gajde'] = sr_gajde;
   srpoems['nove'] = sr_nove;
 
+  /*---------------
+  END SERBIAN PUBLICATIONS
+  ----------------*/
+
+  /*---------------
+  ENGLISH PUBLICATIONS
+  ----------------*/
+  const en_ninepoets = [
+    { name: 'Поседи', link: 'posedi' },
+    { name: 'О. речи', link: 'o_reci' },
+  ];
+
+  const enpoems = new Object();
+  srpoems['ninepoets'] = en_ninepoets;
+
+  /*---------------
+  END ENGLISH PUBLICATIONS
+  ----------------*/
+
   const classClosed = 'fa-caret-right';
   const classOpen = 'fa-caret-down';
 
@@ -145,7 +158,6 @@
   };
 
   expandPoems = (id) => {
-    debugger;
     var el = document.getElementById(id);
 
     if (el && el.childElementCount === 0) {
@@ -160,7 +172,9 @@
         icon.classList.remove(classClosed);
         icon.classList.add(classOpen);
       }
-      const poems = srpoems[id];
+
+      const poems = getPoems();
+      const publication = poems[id];
       // el.style.opacity = 0;
       // setTimeout(() => {
       //   poems.forEach((p) => {
@@ -168,17 +182,31 @@
       //   });
       //   el.style.opacity = 1;
       // }, 500);
-      poems.forEach((p) => {
+      publication.forEach((p) => {
         el.innerHTML += `<div class="poem" onclick=loadPoem("${p.link}")>${p.name}</div>`;
       });
     }
   };
 
+  getPoems = () => {
+    const lng = window.localStorage.getItem('currentLanguage');
+    switch (lng.toLowerCase()) {
+      case 'sr':
+        return srpoems;
+      case 'en':
+        return enpoems;
+      default:
+        return srpoems;
+    }
+  };
+
   loadPoem = (page) => {
+    const lng = window.localStorage.getItem('currentLanguage');
+
     let el = document.getElementById('includePoem');
     el.style.opacity = 0;
     setTimeout(() => {
-      $('#includePoem').load(`./sr/poetry/${page}.html`);
+      $('#includePoem').load(`./${lng.toLowerCase()}/poetry/${page}.html`);
       el.style.opacity = 1;
     }, 500);
   };
