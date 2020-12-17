@@ -121,13 +121,35 @@
   /*---------------
   ENGLISH PUBLICATIONS
   ----------------*/
+  const publicationEnIds = ['ninepoets'];
+
   const en_ninepoets = [
-    { name: 'Поседи', link: 'posedi' },
-    { name: 'О. речи', link: 'o_reci' },
+    { name: 'As I am informed', link: 'as_i_am_informed' },
+    { name: 'Examin myself', link: 'examin_myself' },
+    { name: 'Ha', link: 'ha' },
+    { name: 'Haystack', link: 'haystack' },
+    { name: 'I turn around in god', link: 'i_turn_around_in_god' },
+    { name: 'In the dusk', link: 'in_the_dusk' },
+    { name: 'Iron jaws', link: 'iron_jaws' },
+    { name: 'Joyfull', link: 'joyfull' },
+    { name: 'Little tongue', link: 'little_tongue' },
+    { name: 'Ode', link: 'ode' },
+    { name: 'Oh sad sack sonny', link: 'oh_sad_sack_sonny' },
+    { name: 'Revelation', link: 'revelation' },
+    { name: 'The bend', link: 'the_bend' },
+    { name: "Brecht's House", link: 'the_brecthst_house' },
+    { name: 'The gender king', link: 'the_gender_king' },
+    { name: 'The island', link: 'the_island' },
+    { name: 'The leash', link: 'the_leash' },
+    { name: 'The lighting is week', link: 'the_lighting_is_week' },
+    { name: 'The tomcat', link: 'the_tomcat' },
+    { name: 'The wicked guest', link: 'the_wicked_guest' },
+    { name: 'The winter report', link: 'the_winter_report' },
+    { name: 'Weight', link: 'weight' },
   ];
 
   const enpoems = new Object();
-  srpoems['ninepoets'] = en_ninepoets;
+  enpoems['ninepoets'] = en_ninepoets;
 
   /*---------------
   END ENGLISH PUBLICATIONS
@@ -145,8 +167,12 @@
     element.innerHTML = '';
   };
 
-  const closeMulty = (ids) => {
-    ids.forEach((id) => {
+  const closeMulty = (id) => {
+    const lng = window.localStorage.getItem('currentLanguage');
+    const ids = lng === 'sr' ? publicationIds : publicationEnIds;
+
+    const closeIds = ids.filter((x) => x !== id);
+    closeIds.forEach((id) => {
       const el = document.getElementById(id);
       // el.style.opacity = 0;
       // setTimeout(() => {
@@ -161,7 +187,7 @@
     var el = document.getElementById(id);
 
     if (el && el.childElementCount === 0) {
-      closeMulty(publicationIds.filter((x) => x !== id));
+      closeMulty(id);
     }
 
     const icon = document.getElementById(`${id}icon`);
