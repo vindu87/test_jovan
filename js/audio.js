@@ -131,7 +131,7 @@
     { name: 'I turn around in god', link: 'i_turn_around_in_god' },
     { name: 'In the dusk', link: 'in_the_dusk' },
     { name: 'Iron jaws', link: 'iron_jaws' },
-    { name: 'Joyfull', link: 'joyfull' },
+    { name: 'Joyfull bound to the event', link: 'joyfull' },
     { name: 'Little tongue', link: 'little_tongue' },
     { name: 'Ode', link: 'ode' },
     { name: 'Oh sad sack sonny', link: 'oh_sad_sack_sonny' },
@@ -169,7 +169,7 @@
 
   const closeMulty = (id) => {
     const lng = window.localStorage.getItem('currentLanguage');
-    const ids = lng === 'sr' ? publicationIds : publicationEnIds;
+    const ids = lng.toLowerCase() === 'sr' ? publicationIds : publicationEnIds;
 
     const closeIds = ids.filter((x) => x !== id);
     closeIds.forEach((id) => {
