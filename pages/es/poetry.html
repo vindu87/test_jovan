@@ -1,0 +1,26 @@
+<section id="poetry" class="poetry">
+    <h3>Poesía</h3>
+    <ul class="grid">
+        <li style="width: 37%;">
+
+            <div style="margin-top: 10px; margin-bottom: 10px;">Publicaciones:</div>
+            <div id='list' style="padding-left: 10px;">
+                <div class='publication'>
+                    <div onclick="expandPoems('informe')">
+                        <i id="informeicon" class="fas fa-caret-right"></i>
+                        Inform invernal 2014
+                    </div>
+                    <div id='informe' class="poemlist" style="max-height: 300px; overflow: auto; margin-top: 10px"></div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; border-top: 1px solid grey;">Traducido por Dragana Bajić</br>
+            Lectura y corrección por Jesús Belmonte
+            </div>
+        </li>
+        <li style="width: 63%; ">
+            <div style="transition: 0.8s;" id='includePoem'></div>
+        </li>
+    </ul>
+    <hr>
+</section>
+<script src="../js/audio.js"></script>

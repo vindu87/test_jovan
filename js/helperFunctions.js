@@ -40,12 +40,17 @@ const rus_links = [
   { name: 'Биография', link: '/biography.html' },
   { name: 'Kниги', link: '/books.html' },
 ];
+const es_links = [
+  { name: 'Biografía', link: '/biography.html' },
+  { name: 'Poesía', link: '/poetry.html' },
+];
 
 export const links = new Object();
 links['sr'] = sr_links;
 links['en'] = en_links;
 links['fr'] = fr_links;
 links['rus'] = rus_links;
+links['es'] = es_links;
 
 //main menu change
 export const loadMainMenu = (language) => {
@@ -64,8 +69,8 @@ export const loadMainMenu = (language) => {
 };
 
 const page_lngs = new Object();
-page_lngs['biography'] = ['sr', 'en', 'fr', 'rus'];
-page_lngs['poetry'] = ['sr', 'en'];
+page_lngs['biography'] = ['sr', 'en', 'fr', 'rus', 'es'];
+page_lngs['poetry'] = ['sr', 'en', 'es'];
 page_lngs['books'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['events'] = ['sr'];
 page_lngs['interview'] = ['sr'];

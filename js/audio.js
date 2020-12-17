@@ -155,6 +155,45 @@
   END ENGLISH PUBLICATIONS
   ----------------*/
 
+  /*---------------
+  SPANISH PUBLICATIONS
+  ----------------*/
+  const publicationEsIds = ['informe'];
+
+  const es_informe = [
+    { name: 'Desgraciado hijo mio', link: 'desgraciado' },
+    { name: 'Informe invernal', link: 'informe' },
+    { name: 'Doblegate', link: 'doblegate' },
+    { name: 'Isla', link: 'isla' },
+    { name: 'El gato', link: 'gato' },
+    { name: 'Casas de brecht', link: 'casas' },
+    { name: 'Dentro de casas', link: 'dentro' },
+    { name: 'Almiar', link: 'almiar' },
+    { name: 'Plomo', link: 'plomo' },
+    { name: 'Propiedades', link: 'propiedades' },
+  ];
+
+  const espoems = new Object();
+  espoems['informe'] = es_informe;
+
+  /*---------------
+  END SPANISH PUBLICATIONS
+  ----------------*/
+
+  getPublicationIds = () => {
+    const lng = window.localStorage.getItem('currentLanguage');
+    switch (lng.toLowerCase()) {
+      case 'sr':
+        return publicationIds;
+      case 'en':
+        return publicationEnIds;
+      case 'es':
+        return publicationEsIds;
+      default:
+        return publicationIds;
+    }
+  };
+
   const classClosed = 'fa-caret-right';
   const classOpen = 'fa-caret-down';
 
@@ -168,9 +207,7 @@
   };
 
   const closeMulty = (id) => {
-    const lng = window.localStorage.getItem('currentLanguage');
-    const ids = lng.toLowerCase() === 'sr' ? publicationIds : publicationEnIds;
-
+    const ids = getPublicationIds();
     const closeIds = ids.filter((x) => x !== id);
     closeIds.forEach((id) => {
       const el = document.getElementById(id);
@@ -221,6 +258,8 @@
         return srpoems;
       case 'en':
         return enpoems;
+      case 'es':
+        return espoems;
       default:
         return srpoems;
     }
