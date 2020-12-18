@@ -180,7 +180,59 @@
   END SPANISH PUBLICATIONS
   ----------------*/
 
-  getPublicationIds = () => {
+  /*---------------
+  FRENCH PUBLICATIONS
+  ----------------*/
+  const publicationFrIds = ['leroi'];
+
+  const fr_leroi = [
+    { name: 'Joyeusement a un événement lié', link: 'joyeusement' },
+    { name: 'La descente', link: 'la_descente' },
+    { name: 'La laisse', link: 'la_laise' },
+    { name: 'Le chat', link: 'le_chat' },
+    { name: 'Le poids', link: 'le_poids' },
+    { name: 'Le roi des oies', link: 'le_roi' },
+    { name: 'Les bosquets', link: 'les_bousqets' },
+    { name: 'Les mâchoires de fer', link: 'les_machoires' },
+    { name: 'Les maisons de brecht', link: 'les_maisons' },
+    { name: 'L’île', link: 'lile' },
+    { name: 'Mal invité', link: 'mal_invite' },
+    { name: 'Mon pauvre fils', link: 'mon_pavre' },
+    { name: 'Propriétés', link: 'propreties' },
+    { name: '***', link: 'star' },
+  ];
+
+  const frpoems = new Object();
+  frpoems['leroi'] = fr_leroi;
+
+  /*---------------
+  END FRENCH PUBLICATIONS
+  ----------------*/
+
+  /*---------------
+  РУСКИ PUBLICATIONS
+  ----------------*/
+  const publicationRusIds = ['зимски'];
+
+  const rus_зимски = [
+    { name: 'Зимний отчет', link: 'отчет' },
+    { name: 'Злой гость', link: 'гост' },
+    { name: 'Поводок', link: 'поводок' },
+    { name: 'Oстров', link: 'остров' },
+    { name: 'Дома брехта', link: 'дома' },
+    { name: 'Освещение слабое ', link: 'слабое' },
+    { name: 'Я поворачиваюсь к богу', link: 'богу' },
+    { name: 'Железные челюсти', link: 'челости' },
+    { name: 'О. слова', link: 'слова' },
+    { name: 'Имения', link: 'имениа' },
+  ];
+
+  const ruspoems = new Object();
+  ruspoems['зимски'] = rus_зимски;
+
+  /*---------------
+  END РУСКИ PUBLICATIONS
+  ----------------*/ getPublicationIds = () => {
     const lng = window.localStorage.getItem('currentLanguage');
     switch (lng.toLowerCase()) {
       case 'sr':
@@ -189,6 +241,10 @@
         return publicationEnIds;
       case 'es':
         return publicationEsIds;
+      case 'fr':
+        return publicationFrIds;
+      case 'rus':
+        return publicationRusIds;
       default:
         return publicationIds;
     }
@@ -260,6 +316,10 @@
         return enpoems;
       case 'es':
         return espoems;
+      case 'fr':
+        return frpoems;
+      case 'rus':
+        return ruspoems;
       default:
         return srpoems;
     }

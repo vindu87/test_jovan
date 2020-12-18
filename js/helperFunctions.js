@@ -34,10 +34,12 @@ const en_links = [
 
 const fr_links = [
   { name: 'Biographie', link: '/biography.html' },
+  { name: 'Poésie', link: '/poetry.html' },
   { name: 'Livres', link: '/books.html' },
 ];
 const rus_links = [
   { name: 'Биография', link: '/biography.html' },
+  { name: 'Поэзия', link: '/poetry.html' },
   { name: 'Kниги', link: '/books.html' },
 ];
 const es_links = [
@@ -70,7 +72,7 @@ export const loadMainMenu = (language) => {
 
 const page_lngs = new Object();
 page_lngs['biography'] = ['sr', 'en', 'fr', 'rus', 'es'];
-page_lngs['poetry'] = ['sr', 'en', 'es'];
+page_lngs['poetry'] = ['sr', 'en', 'fr', 'rus', 'es'];
 page_lngs['books'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['events'] = ['sr'];
 page_lngs['interview'] = ['sr'];
