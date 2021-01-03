@@ -138,7 +138,7 @@
     { name: 'Revelation', link: 'revelation' },
     { name: 'The bend', link: 'the_bend' },
     { name: "Brecht's House", link: 'the_brecthst_house' },
-    { name: 'The gender king', link: 'the_gender_king' },
+    { name: 'The gender king', link: 'the_gander_king' },
     { name: 'The island', link: 'the_island' },
     { name: 'The leash', link: 'the_leash' },
     { name: 'The lighting is week', link: 'the_lighting_is_week' },
