@@ -335,4 +335,16 @@
       el.style.opacity = 1;
     }, 500);
   };
+
+  (initialLngExpand = () => {
+    const lng = window.localStorage.getItem('currentLanguage');
+    if (lng.toLowerCase() !== 'sr') {
+      lng.toLowerCase() === 'es' && expandPoems(publicationEsIds[0]);
+      lng.toLowerCase() === 'fr' && expandPoems(publicationFrIds[0]);
+      lng.toLowerCase() === 'rus' && expandPoems(publicationRusIds[0]);
+      lng.toLowerCase() === 'en' && expandPoems(publicationEnIds[0]);
+    }
+  })();
+
+
 })();
