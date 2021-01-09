@@ -24,6 +24,7 @@ const sr_links = [
   { name: 'Интервјуи', link: '/interview.html' },
   { name: 'Догађаји', link: '/events.html' },
   { name: 'Видео', link: '/video.html' },
+  // { name: 'Test', link: '/test.html' },
 ];
 
 const en_links = [
@@ -64,7 +65,7 @@ export const loadMainMenu = (language) => {
     sandwich.innerHTML = '';
     var lngLinks = links[language.toLowerCase()];
     lngLinks.forEach((e) => {
-      navigation.innerHTML += `<li><a onclick="goTo('${e.link}')">${e.name}</a></li>`;
+      navigation.innerHTML += `<li><a id='${e.link}' onclick="goTo('${e.link}')">${e.name}</a></li>`;
       sandwich.innerHTML += `<a onclick="goTo('${e.link}')">${e.name}</a>`;
     });
   }
@@ -77,6 +78,7 @@ page_lngs['books'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['events'] = ['sr'];
 page_lngs['interview'] = ['sr'];
 page_lngs['video'] = ['sr'];
+// page_lngs['test'] = ['sr'];
 
 export const loadLanguages = (page) => {
   var currentValue = getValue('currentLanguage');
@@ -96,11 +98,22 @@ export const loadLanguages = (page) => {
   }
 };
 
+export const focusElement = (page) => {
+  const focus = document.getElementById(page);
+  if (focus) {
+    $('li a').removeClass('active');
+    focus.classList.add('active');
+  }
+}
+
 export const goTo = (page) => {
   var value = getValue('currentLanguage');
   $('#includeContent').load(
     `./${value === 'novalue' ? 'sr' : value.toLowerCase()}${page}`
   );
   loadLanguages(page.replace('.html', '').replace('/', ''));
+
+  focusElement(page);
+
   toTheTop();
 };

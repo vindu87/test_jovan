@@ -3,6 +3,7 @@ import {
   loadLanguages,
   loadMainMenu,
   goTo,
+  focusElement
 } from './js/helperFunctions.js';
 
 // mouseTarget.addEventListener('mouseleave', (e) => {
@@ -54,12 +55,11 @@ window.toggleLanguage = function toggleLanguage(lng, page) {
   loadMainMenu(lng);
   $('#includeContent').load(`./${lng.toLowerCase()}/${page}.html`);
   expandLanguage();
+  focusElement(`/${page}.html`);
   toTheTop();
 };
 
 window.goTo = goTo;
-
-
 
 window.toTheItem = function toTheItem(id) {
   let el = document.getElementById(id);

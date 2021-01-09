@@ -26,6 +26,11 @@ header nav li :hover {
   color: #fff;
 }
 
+header nav li a.active {
+  color: red;
+  opacity: 1;
+}
+
 ul,
 nav {
   list-style: none;

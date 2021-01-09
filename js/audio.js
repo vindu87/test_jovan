@@ -232,7 +232,8 @@
 
   /*---------------
   END РУСКИ PUBLICATIONS
-  ----------------*/ getPublicationIds = () => {
+  ----------------*/
+  getPublicationIds = () => {
     const lng = window.localStorage.getItem('currentLanguage');
     switch (lng.toLowerCase()) {
       case 'sr':
@@ -325,26 +326,26 @@
     }
   };
 
-  loadPoem = (page) => {
+  loadPoem = (poem) => {
     const lng = window.localStorage.getItem('currentLanguage');
 
     let el = document.getElementById('includePoem');
     el.style.opacity = 0;
     setTimeout(() => {
-      $('#includePoem').load(`./${lng.toLowerCase()}/poetry/${page}.html`);
+      $('#includePoem').load(`./${lng.toLowerCase()}/poetry/${poem}.html`);
       el.style.opacity = 1;
     }, 500);
   };
 
   (initialLngExpand = () => {
+    const publications = getPublicationIds();
+    expandPoems(publications[0]);
+
     const lng = window.localStorage.getItem('currentLanguage');
-    if (lng.toLowerCase() !== 'sr') {
-      lng.toLowerCase() === 'es' && expandPoems(publicationEsIds[0]);
-      lng.toLowerCase() === 'fr' && expandPoems(publicationFrIds[0]);
-      lng.toLowerCase() === 'rus' && expandPoems(publicationRusIds[0]);
-      lng.toLowerCase() === 'en' && expandPoems(publicationEnIds[0]);
-    }
+    lng.toLowerCase() === 'sr' && loadPoem('blagost_linija');
+    lng.toLowerCase() === 'es' && loadPoem('desgraciado');
+    lng.toLowerCase() === 'fr' && loadPoem('joyeusement');
+    lng.toLowerCase() === 'rus' && loadPoem('отчет');
+    lng.toLowerCase() === 'en' && loadPoem('as_i_am_informed');
   })();
-
-
 })();
