@@ -85,6 +85,26 @@ ul.grid {
 }
 
 /*---------
+    PRELOAD
+    ---------*/
+.content {
+  display: none;
+  min-height: calc(100% - 90px);
+}
+
+.footer {
+  display: none;
+}
+
+.preload {
+  width: 100px;
+  min-height: calc(100% - 70px);
+  position: fixed;
+  top: 40%;
+  left: 45%;
+}
+
+/*---------
     ABOUT
     ---------*/
 .about {
@@ -264,23 +284,29 @@ interview
   font-size: 30px;
 }
 
-.article-menu {
+.left-side-menu {
   position: fixed;
   left: 3%;
   top: 180px;
 }
 
-.article-menu ul {
+.left-side-menu ul {
   display: table-cell;
   padding-top: 5px;
 }
-.article-menu ul li {
-  display: table-row;
+.left-side-menu ul li {
+  /* display: table-row;
   height: 20px;
   list-style-type: none;
   margin: 10px;
-  vertical-align: middle;
+  vertical-align: middle; */
+  margin-left: 15px;
   cursor: pointer;
+  height: 25px;
+}
+
+.left-side-menu ul li :hover {
+  color: #51a97c;
 }
 
 .interview {
@@ -349,6 +375,23 @@ VIDEO
   }
 }
 
+/*------------
+CRITICS
+------------*/
+.criticism {
+  text-align: left;
+}
+
+#criticism .content {
+  max-width: 700px;
+  /* padding-left: 10%;
+  padding-right: 10%; */
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
 @media (max-width: 400px) {
   #video iframe {
     width: 300px;
@@ -397,7 +440,7 @@ MEDIA
     display: none;
   }
 
-  .article-menu {
+  .left-side-menu {
     display: none;
   }
 }

@@ -24,6 +24,7 @@ const sr_links = [
   { name: 'Интервјуи', link: '/interview.html' },
   { name: 'Догађаји', link: '/events.html' },
   { name: 'Видео', link: '/video.html' },
+  //{ name: 'Критика', link: '/criticism.html' },
   // { name: 'Test', link: '/test.html' },
 ];
 
@@ -78,6 +79,7 @@ page_lngs['books'] = ['sr', 'en', 'fr', 'rus'];
 page_lngs['events'] = ['sr'];
 page_lngs['interview'] = ['sr'];
 page_lngs['video'] = ['sr'];
+//page_lngs['criticism'] = ['sr'];
 // page_lngs['test'] = ['sr'];
 
 export const loadLanguages = (page) => {
@@ -107,6 +109,7 @@ export const focusElement = (page) => {
 }
 
 export const goTo = (page) => {
+  pageTransition();
   var value = getValue('currentLanguage');
   $('#includeContent').load(
     `./${value === 'novalue' ? 'sr' : value.toLowerCase()}${page}`
@@ -117,3 +120,23 @@ export const goTo = (page) => {
 
   toTheTop();
 };
+
+export const preload = () => {
+  $('.preload').fadeOut(1000, function () {
+    $('.content').fadeIn(300);
+    $('.footer').fadeIn(300);
+  });
+};
+
+export const hideBeforePreload = () => {
+  $('.content').css({ display: 'none' });
+  $('.footer').css({ display: 'none' });
+  $('.preload').css({ display: 'block' });
+};
+
+export const pageTransition = () => {
+  hideBeforePreload();
+  preload();
+}
+
+

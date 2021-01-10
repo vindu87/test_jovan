@@ -27,7 +27,7 @@ header nav li :hover {
 }
 
 header nav li a.active {
-  color: red;
+  color:orange;
   opacity: 1;
 }
 

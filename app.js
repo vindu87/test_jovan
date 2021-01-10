@@ -6,11 +6,6 @@ import {
   focusElement
 } from './js/helperFunctions.js';
 
-// mouseTarget.addEventListener('mouseleave', (e) => {
-//   mouseTarget.style.border = '1px solid #333';
-//   leaveEventCount++;
-//   addListItem('This is mouseleave event ' + leaveEventCount + '.');
-// });
 window.toTheTop = function toTheTop() {
   window.scrollTo(50, 0);
 };
@@ -67,3 +62,4 @@ window.toTheItem = function toTheItem(id) {
     window.scroll(0, el.offsetTop - 80);
   }
 };
+

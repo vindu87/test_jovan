@@ -1,4 +1,9 @@
-import { loadMainMenu, loadLanguages, getValue } from './helperFunctions.js';
+import {
+  loadMainMenu,
+  loadLanguages,
+  getValue,
+  preload,
+} from './helperFunctions.js';
 
 const initialLoad = () => {
   loadLanguages('biography');
@@ -10,9 +15,9 @@ const initialLoad = () => {
   if (firstFocus) {
     firstFocus.classList.add('active');
   }
-
 };
 
 $(function () {
   initialLoad();
+  preload();
 });
