@@ -48,6 +48,15 @@ hr {
   margin: 30px auto;
 }
 
+.starbreak {
+  width: 150px;
+  height: 10px;
+  line-height: 20px;
+  font-size: 20px;
+  margin: 30px auto;
+  text-align: center;
+}
+
 section {
   box-sizing: border-box;
   background-color: #fff;
@@ -66,7 +75,7 @@ section p {
 
 section h3 {
   color: #414a4f;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-size: 32px;
   margin-top: 10px;
   margin-bottom: 25px;
@@ -305,10 +314,6 @@ interview
   height: 25px;
 }
 
-.left-side-menu ul li :hover {
-  color: #51a97c;
-}
-
 .interview {
   text-align: left;
 }
@@ -390,6 +395,35 @@ CRITICS
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: justify;
+}
+
+/* #criticism .content :hover {
+  background-color: orange;
+} */
+#criticism .left-side-menu {
+  margin-top: 45px;
+}
+
+#criticism .left-side-menu li {
+  cursor: pointer;
+}
+
+/* #criticism .menuitem :hover {
+  padding-left: 10px;
+  color: #51a97c;
+  transition: padding-left 0.5s ease, color 0.5s ease;
+} */
+
+#criticism .left-side-menu li :hover {
+  padding-left: 10px;
+  color: #51a97c;
+  /* font-size: 20px; */
+  transition: padding-left 0.5s ease, color 0.5s ease;
+}
+
+#criticism .content section {
+  margin: 0 0 50px 0;
+  padding: 10px;
 }
 
 @media (max-width: 400px) {

@@ -6,33 +6,80 @@
         <!-- <div style="margin-left: 10px;
         padding-bottom: 5px; margin-bottom: 5px; font-weight: bold;
         ">Критике :</div> -->
-        <div style="height: 30px;"></div>
+        <!-- <div style="height: 30px;"></div> -->
         <ul>
-            <li onclick="loadCritic('lepen')">Le Pen Club français, Париз, маj 2011.</li>
-            <li onclick="loadCritic('ralf')">Ралф Јулке</li>
-            <li onclick="loadCritic('vojceh')">Војћех Калишевски</li>
-            <li onclick="loadCritic()">Политика, 2015.</li>
-            <li onclick="loadCritic()">Политика, 2015.</li>
+            <li onclick="toTheItem('smitran', 100)">
+                <div class="menuitem">С. Шмитран</div>
+            </li>
+            <li onclick="toTheItem('lepen', 100)">
+                <div class="menuitem">Le Pen Club français</div>
+            </li>
+            <li onclick="toTheItem('ralf', 100)" class="menuitem">
+                <div class="menuitem">Ралф Јулке</div>
+            </li>
+            <li onclick="toTheItem('zeitung', 100)">
+                <div class="menuitem">Leipziger internet Zeitung</div>
+            </li>
+            <li onclick="toTheItem('vojceh', 100)">
+                <div class="menuitem">Војћех Калишевски</div>
+            </li>
+            <li onclick="toTheItem('prole', 100)">
+                <div class="menuitem">Драган Проле</div>
+            </li>
+            <li onclick="toTheItem('cistel', 100)">
+                <div class="menuitem">Al. Cistelcan</div>
+            </li>
+            <li onclick="toTheItem('gvozden', 100)">
+                <div class="menuitem">Владимир Гвозден</div>
+            </li>
+            <li onclick="toTheItem('radojcic', 100)">
+                <div class="menuitem">Саша Радојчић</div>
+            </li>
+            <li onclick="toTheItem('stojanovic', 100)">
+                <div class="menuitem">Бојана Стојановић Пантовић</div>
+            </li>
+            <li onclick="toTheItem('simljanska', 100)">
+                <div class="menuitem">Адријана Шимањска</div>
+            </li>
         </ul>
     </div>
-    <h3>Критика</h3>
-    <div class="content">
-        <!-- <div class="interview-title">
-            <a href="https://www.nacionalnarevija.com/tekstovi/br%2055/05%20Zivlak.html" target="_blank">Извор:
-                Национална Ревија, 2016.</a>
-        </div> -->
-        <div style="transition: 0.8s;" id="critic"></div>
+    <h3>Критика о песнику (избор)</h3>
+    <div id='content' style="transition: 0.8s;" class="content">
+        <section id="smitran">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="lepen">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="ralf">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="zeitung">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="vojceh">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="prole">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="cistel">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="gvozden">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="radojcic">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="stojanovic">
+        </section>
+        <div class="starbreak">***</div>
+        <section id="simljanska">
+        </section>
+        <div class="starbreak">***</div>
+        <!-- <div style="transition: 0.8s;" id="critic"></div> -->
     </div>
-    <hr>
-    <!-- <div class="article" id="2">
-        <div class="interview-title">
-            <a href="http://www.politika.rs/scc/clanak/331616/Menadzeri-su-postali-vazniji-od-umetnika"
-                target="_blank">Извор:
-                Политика, 2015.</a>
-        </div>
-        <div id="politika"></div>
-    </div>
-    <hr> -->
 
 </section>
 <!-- <script src="../js/loadInterview.js"></script> -->

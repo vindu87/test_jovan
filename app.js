@@ -3,7 +3,7 @@ import {
   loadLanguages,
   loadMainMenu,
   goTo,
-  focusElement
+  focusElement,
 } from './js/helperFunctions.js';
 
 window.toTheTop = function toTheTop() {
@@ -56,10 +56,9 @@ window.toggleLanguage = function toggleLanguage(lng, page) {
 
 window.goTo = goTo;
 
-window.toTheItem = function toTheItem(id) {
+window.toTheItem = function toTheItem(id, minus = 0, plus = 0) {
   let el = document.getElementById(id);
   if (el) {
-    window.scroll(0, el.offsetTop - 80);
+    window.scroll(0, el.offsetTop - minus + plus);
   }
 };
-
