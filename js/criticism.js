@@ -10,7 +10,7 @@
     'gvozden',
     'radojcic',
     'stojanovic',
-    'simljanska'
+    'simljanska',
   ];
 
   loadCritic = () => {
@@ -23,6 +23,19 @@
 
       el.style.opacity = 1;
     }, 500);
+  };
+
+  addStyle = (id) => {
+    removeStyleMultiple(articles.filter(x => x !== id));
+    let el = document.getElementById(id);
+    el.classList.add('activebckg');
+  };
+
+  removeStyleMultiple = (ids) => {
+    ids.forEach((id) => {
+      let el = document.getElementById(id);
+      el.classList.remove('activebckg');
+    });
   };
 
   loadCritic();

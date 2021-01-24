@@ -340,6 +340,17 @@ interview
   margin-bottom: 20px;
 }
 
+#interview .left-side-menu {
+  margin-top: 45px;
+}
+
+#interview .left-side-menu li :hover {
+  padding-left: 10px;
+  color: #51a97c;
+  /* font-size: 20px; */
+  transition: padding-left 0.5s ease, color 0.5s ease;
+}
+
 @media (max-width: 600px) {
   #interview img {
     width: 350px;
@@ -397,28 +408,20 @@ CRITICS
   text-align: justify;
 }
 
-/* #criticism .content :hover {
-  background-color: orange;
-} */
 #criticism .left-side-menu {
   margin-top: 45px;
 }
-
-#criticism .left-side-menu li {
-  cursor: pointer;
-}
-
-/* #criticism .menuitem :hover {
-  padding-left: 10px;
-  color: #51a97c;
-  transition: padding-left 0.5s ease, color 0.5s ease;
-} */
 
 #criticism .left-side-menu li :hover {
   padding-left: 10px;
   color: #51a97c;
   /* font-size: 20px; */
   transition: padding-left 0.5s ease, color 0.5s ease;
+}
+
+#criticism .activebckg {
+  background-color: rgb(241, 237, 236);
+  transition: background-color 2s
 }
 
 #criticism .content section {
