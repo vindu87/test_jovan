@@ -326,10 +326,10 @@ interview
 }
 
 #interview .article {
-  max-width: 800px;
-  /* padding-left: 10%;
-  padding-right: 10%; */
-  margin: 0px 20px;
+  max-width: 700px;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
@@ -351,12 +351,6 @@ interview
   transition: padding-left 0.5s ease, color 0.5s ease;
 }
 
-@media (max-width: 600px) {
-  #interview img {
-    width: 350px;
-  }
-}
-
 /*------------
 EVENTS
 -----------*/
@@ -376,21 +370,6 @@ VIDEO
   margin-bottom: 10px;
 }
 
-@media (max-width: 600px) {
-  #about .imageleft img {
-    width: 200px;
-  }
-
-  #video iframe {
-    width: 400px;
-  }
-
-  #events .grid li img {
-    width: 400px;
-    height: 500px;
-  }
-}
-
 /*------------
 CRITICS
 ------------*/
@@ -400,8 +379,6 @@ CRITICS
 
 #criticism .content {
   max-width: 700px;
-  /* padding-left: 10%;
-  padding-right: 10%; */
   margin-left: 200px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -421,7 +398,7 @@ CRITICS
 
 #criticism .activebckg {
   background-color: rgb(241, 237, 236);
-  transition: background-color 2s
+  transition: background-color 2s;
 }
 
 #criticism .content section {
@@ -435,8 +412,12 @@ CRITICS
   }
   #interview .article {
     width: 330px;
+    margin-left: 0px;
   }
-
+  #criticism .content {
+    width: 330px;
+    margin-left: 0px;
+  }
   #interview img {
     width: 300px;
   }
@@ -480,6 +461,16 @@ MEDIA
   .left-side-menu {
     display: none;
   }
+
+  #criticism .content {
+    width: 700px;
+    margin-left: 0px;
+  }
+
+  #interview .article {
+    width: 700px;
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -497,6 +488,33 @@ MEDIA
   .poetry .grid li {
     min-width: 100%;
     padding-left: 10px;
+  }
+
+  #interview img {
+    width: 350px;
+  }
+
+  #criticism .content {
+    width: 400px;
+    margin-left: 0px;
+  }
+
+  #interview .article {
+    width: 400px;
+    margin-left: 0px;
+  }
+
+  #about .imageleft img {
+    width: 200px;
+  }
+
+  #video iframe {
+    width: 400px;
+  }
+
+  #events .grid li img {
+    width: 400px;
+    height: 500px;
   }
 }
 

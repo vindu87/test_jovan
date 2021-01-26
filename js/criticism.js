@@ -11,6 +11,7 @@
     'radojcic',
     'stojanovic',
     'simljanska',
+    'caslav'
   ];
 
   loadCritic = () => {
