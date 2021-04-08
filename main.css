@@ -12,19 +12,10 @@ html {
 body {
   color: #555;
   font: normal;
-  /* font-size: 16px; */
-  font-size: 1.2em;
-  font-weight: 400;
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
+  font-family: Poets Electra, Georgia, Times New Roman, serif;
   height: 100%;
 }
 
-/* ul,
-nav {
-  list-style: none;
-}
-*/
 a {
   text-decoration: none;
   color: inherit;
@@ -118,9 +109,8 @@ ul.grid {
     ---------*/
 .about {
   background-color: #fff;
-  /* font-size: 14px; */
-  font-size: 1em;
-  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.85rem;
   width: 100%;
 }
 
@@ -146,7 +136,6 @@ ul.grid {
 
 .about .text {
   float: none;
-  text-align: justify;
 }
 
 .about .grid li {
@@ -213,16 +202,22 @@ POETRY
 }
 
 #poetry .grid li p {
-  /* line-height: 22px;*/
   padding: 0px;
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
 }
 
+#poetry .menuheader {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
 #poetry .publication {
   cursor: pointer;
   margin-bottom: 5px;
+  font-size: 18px;
 }
 
 #poetry .publication i {
@@ -297,6 +292,8 @@ interview
   position: fixed;
   left: 3%;
   top: 180px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .left-side-menu ul {
@@ -304,11 +301,6 @@ interview
   padding-top: 5px;
 }
 .left-side-menu ul li {
-  /* display: table-row;
-  height: 20px;
-  list-style-type: none;
-  margin: 10px;
-  vertical-align: middle; */
   margin-left: 15px;
   cursor: pointer;
   height: 25px;
@@ -330,7 +322,8 @@ interview
   margin-left: 200px;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: justify;
+  font-size: 1.15rem;
+  line-height: 1.65rem;
 }
 
 #interview .interview-title {
@@ -347,7 +340,6 @@ interview
 #interview .left-side-menu li :hover {
   padding-left: 10px;
   color: #51a97c;
-  /* font-size: 20px; */
   transition: padding-left 0.5s ease, color 0.5s ease;
 }
 
@@ -382,7 +374,8 @@ CRITICS
   margin-left: 200px;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align: justify;
+  font-size: 1.25rem;
+  line-height: 1.85rem;
 }
 
 #criticism .left-side-menu {
@@ -392,7 +385,6 @@ CRITICS
 #criticism .left-side-menu li :hover {
   padding-left: 10px;
   color: #51a97c;
-  /* font-size: 20px; */
   transition: padding-left 0.5s ease, color 0.5s ease;
 }
 
